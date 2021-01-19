@@ -23,7 +23,10 @@ def login_page(request):
             #log user in
             user=form.get_user()
             login(request,user)
-            return redirect('article:list')
+            if 'next'in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('article:list')
     else:
         form=AuthenticationForm()
     return render(request,'accounts/login.html',{'form':form})
