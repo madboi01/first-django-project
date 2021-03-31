@@ -1,16 +1,20 @@
 body{
-    background-color: #0f121f;
-    background-image: url(stars.png);
+    background-color: #206b6b;
     background-repeat-y: no-repeat;
     color: #fff;
+    margin:0;
 }
 
 body *{
-    font-family: Ubuntu;
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5{
-    font-weight: normal;
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
     margin: 0;
 }
 
@@ -22,6 +26,11 @@ a, a:hover, a:visited{
 .wrapper{
     max-width: 960px;
     margin: 0 auto;
+}
+
+.taskbar{
+    background:white;
+    padding:0px;
 }
 
 div.wrapper h1{
@@ -38,6 +47,8 @@ header{
 
 nav{
     justify-self: end;
+    margin-right:20px;
+    margin-top:6px;
 }
 
 nav li{
@@ -48,11 +59,24 @@ nav li{
 
 nav button{
     background:none;
-    color:white;
+    color:black;
     border:none;
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
     font-size:1.1em;
     cursor:pointer;
 }
+
+.taskbar nav a{
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+    background:#e44d22;
+    padding:12px 10px;
+    border-radius:3px;
+}
+
 
 .articles{
     display:grid;
@@ -62,8 +86,8 @@ nav button{
 
 .article{
     padding:20px;
-    border:1px solid aqua;
-    border-width:2px;
+    border:3px solid #e07656;
+    background:#e44d22;
     border-radius:10px;
     border-bottom-right-radius:0px;
     position:relative;
@@ -76,16 +100,18 @@ nav button{
 
 .article .author{
     padding:10px;
-    background:cyan;
+    background:#e07656;
     position:absolute;
     right:0;
     bottom:0;
     margin:0;
-    color:black;
+    color:white;
 }
 
 .article-detail .article{
     padding:0;
+    margin-top:40px;
+    margin-bottom:40px;
 }
 
 .article-detail .article img{
@@ -115,4 +141,60 @@ nav button{
 
 .article-detail .article .detail-author{
     margin-bottom:20px;
+    font-size:0.9em;
 }
+
+.site-form{
+    margin-bottom:100px;
+    margin-left:200px;
+    margin-right:200px;
+    border:3px solid #fdfbfa;
+    padding:20px;
+    background:#44342d
+}
+  
+.site-form input, .site-form textarea{
+display:block;
+margin:5px 0px 0px 0px;
+padding:4px 10px;
+
+}
+
+.site-form input{
+  margin-bottom:20px;
+}
+
+
+.article-create h2{
+    text-align:center;
+    margin:40px;
+    font-size:2em;
+}
+
+.helptext, .helptext ul{
+  margin:0px auto 20px;
+  color:#bbb;
+  font-size:0.9em;
+  display:block;
+}
+
+.errorlist li{
+  padding:10px;
+  list-style-type:none;
+  border:2px solid #f33e3e;
+  margin:10px 0;
+  color:#f33e3e;
+}
+
+.errorlist{
+  padding:0;
+}
+
+.site-form input[type="submit"]{
+  background:#e44d22;
+  border:0;
+  color:#fff;
+  font-size:1.2em;
+  border-radius:4px;
+}
+

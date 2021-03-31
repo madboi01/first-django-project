@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+        </style>
 </head>
 <body>
-    <header class="wrapper">
-        <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}"/></a></h1>
+    <header class="taskbar">
+        <h1><a href="{% url 'home' %}"><img src="{% static 'logo1.PNG' %}"/></a></h1>
         <nav>
             <ul>
                 {% if user.is_authenticated %}
                     <li>
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">Logout</button>
+                            <button type="submit">LOGOUT</button>
                         </form> 
                     </li> 
-                    <li><a href="{% url 'article:create' %}">New Article</a></li>
+                    <li><a href="{% url 'article:create' %}">NEW ARTICLE</a></li>
                     {% else %}
-                        <li><a href="{% url 'accounts:login' %}">Login</a></li>
-                        <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+                        <li><a href="{% url 'accounts:login' %}">LOG IN</a></li>
+                        <li class="new"><a href="{% url 'accounts:signup' %}">SIGN UP</a></li>
                     {% endif %}
             </ul>
         </nav>

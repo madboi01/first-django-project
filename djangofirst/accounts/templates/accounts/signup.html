@@ -5,6 +5,8 @@
 <form class="site-form" action="/accounts/signup/" method="post" >
     {% csrf_token %}
     {{form}}
-    <input type="submit" value="Signup">
+    <div class="submitwrapper">
+        <input type="submit" value="Signup">
+    </div>
 </form>
 {% endblock %}
